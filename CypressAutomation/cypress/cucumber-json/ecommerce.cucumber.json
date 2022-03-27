@@ -1,0 +1,63 @@
+[
+  {
+    "description": "    applicatuon Regression",
+    "keyword": "Feature",
+    "name": "End to end Ecommerce validation",
+    "line": 3,
+    "id": "end-to-end-ecommerce-validation",
+    "tags": [],
+    "uri": "ecommerce.feature",
+    "elements": [
+      {
+        "id": "end-to-end-ecommerce-validation;opening-a-network-page",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Opening a network page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open ECommerce Page",
+            "result": {
+              "status": "passed",
+              "duration": 1521000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I add item to card",
+            "result": {
+              "status": "passed",
+              "duration": 1994000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Validate the total prices",
+            "result": {
+              "status": "passed",
+              "duration": 28000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "select the country and SubmitEvent and verify Thank you",
+            "result": {
+              "status": "passed",
+              "duration": 5604000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -13,8 +13,8 @@ describe('My Forth Test Suit', () => {
       })
 
     it('Debugging', function () {
-        cy.visit('https://rahulshettyacademy.com/angularpractice/')
-        cy.viewport(1200, 660)
+        cy.visit(Cypress.env('url') + '/angularpractice/')
+        
 
         // 1 
         //cy.get(':nth-child(1) > .form-control').type(this.data.name)
@@ -46,8 +46,6 @@ describe('My Forth Test Suit', () => {
         //3.
         //this.data.productName
         this.data.productName.forEach(element => cy.selectProduct(element));
-
-
 
     })
 

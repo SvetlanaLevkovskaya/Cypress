@@ -1,1 +1,17 @@
-{}
+{
+  "defaultCommandTimeout": 5000,
+  "pageLoadTimeout": 10000,
+  "viewportWidth": 1280,
+  "viewportHeight": 720,
+  "env": {
+    "url": "https://rahulshettyacademy.com"
+  },
+  "projectId": "kykqzx",
+  "reporter": "mochawesome",
+  "retries": {
+  "runMode": 1,
+  "openMode": 3
+  },
+  "testFiles": "**/*.feature"
+
+}

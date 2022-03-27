@@ -6,8 +6,7 @@ import 'cypress-iframe'
 describe('Frame Test', () => {
 
     it('Demo example', () => {
-        cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
-        cy.viewport(900, 660)
+        cy.visit(Cypress.env('url') + '/AutomationPractice/')
 
         cy.frameLoaded('#courses-iframe')
         cy.iframe().find("a[href*='mentorship']").eq(0).click()

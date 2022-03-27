@@ -5,8 +5,7 @@
 describe('My Second Test Suit', () => {
 
     it('Checkboxes, Radiobuttons', () => {
-        cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
-        cy.viewport(900, 660)
+        cy.visit(Cypress.env('url') + '/AutomationPractice/')
 
         // checkboxes
         cy.get('#checkBoxOption1').check().should('be.checked').and('have.value', 'option1')
@@ -44,9 +43,8 @@ describe('My Second Test Suit', () => {
     })
 
     it('Alerts, Pop ups', () => {
-        cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
-        cy.viewport(900, 660)
-
+        cy.visit(Cypress.env('url') + '/AutomationPractice/')
+      
         cy.get('#alertbtn').click()
         cy.get('[value="Confirm"]').click()
 
@@ -64,9 +62,8 @@ describe('My Second Test Suit', () => {
     })
 
     it('Child tab', () => {
-        cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
-        cy.viewport(900, 660)
-
+        cy.visit(Cypress.env('url') + '/AutomationPractice/')
+       
         cy.get('#opentab').invoke('removeAttr', 'target').click()
         cy.url().should('include', 'https://www.rahulshettyacademy.com/#/index')
         cy.go('back')
@@ -75,9 +72,8 @@ describe('My Second Test Suit', () => {
 
 
     it('Web tables', () => {
-        cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
-        cy.viewport(900, 660)
-
+        cy.visit(Cypress.env('url') + '/AutomationPractice/')
+        
         cy.get('tr td:nth-child(2)').each(($el, index, $list) => {                    // jquery object
             const text = $el.text()
             if (text.includes('Python')) {
@@ -86,27 +82,24 @@ describe('My Second Test Suit', () => {
                     expect(priceText).to.equal('25')
                 })                         
             }
-            
-
+          
         })
-
         
     })
 
 
     it('Web tables', () => {
-        cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
-        cy.viewport(900, 660)
-
+        cy.visit(Cypress.env('url') + '/AutomationPractice/')
+        
         //cy.get('div.mouse-hover-content').invoke('show')
         cy.contains('Top').click({force:true})
         cy.url().should('eq', 'https://rahulshettyacademy.com/AutomationPractice/#top')
       
     })
 
-    it.only('Child windows', () => {
-        cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
-        cy.viewport(900, 660)
+    it('Child windows', () => {
+        cy.visit(Cypress.env('url') + '/AutomationPractice/')
+        
 
         // 1 - the same domain
         cy.get('#opentab').then((el) => {
@@ -116,10 +109,7 @@ describe('My Second Test Suit', () => {
         })
 
         // 2 - for different domains use remove target
-
-
       
     })
-
 
 })
